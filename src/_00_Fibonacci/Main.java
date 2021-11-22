@@ -1,6 +1,6 @@
 package _00_Fibonacci;
 
-import Tools.CountTime;
+import _0_Tools.CountTime;
 
 public class Main {
     public static void main(String[] args) {
