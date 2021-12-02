@@ -1,6 +1,6 @@
-package _02_二叉树.TraverseTree._01_TraverseTree;
+package _02_二叉树._0_TraverseTree._01_TraverseTree;
 
-import _02_二叉树.BinaryTree;
+import _02_二叉树._00_BinaryTree.BinaryTree;
 
 /**
  * @ClassName TraverseTree
@@ -16,22 +16,22 @@ public class TraverseTree<E> {
     }
 
     // 前序遍历
-	public void preOrderTraversal(){
-		preOrderTraversal((BinaryTree.Node<E>)myTree.root());  //遍历整棵树
+	public void preorderTraversal(){
+		preorderTraversal((BinaryTree.Node<E>)myTree.root());  //遍历整棵树
 	}
 
-	public void preOrderTraversal(BinaryTree.Node<E> node){  //可以指定某个子树遍历
+	private void preorderTraversal(BinaryTree.Node<E> node){  //可以指定某个子树遍历
 		if(node == null) return;
 		System.out.print(node.element + " ");  //先遍历父亲节点
-		preOrderTraversal(node.left);		   //再遍历左子树
-		preOrderTraversal(node.right);		   //最后遍历右子树
+		preorderTraversal(node.left);		   //再遍历左子树
+		preorderTraversal(node.right);		   //最后遍历右子树
 	}
 
 	// 中序遍历
 	public void inorderTraversal(){
 		inorderTraversal((BinaryTree.Node<E>)myTree.root());  //遍历整棵树
 	}
-	public void inorderTraversal(BinaryTree.Node<E> node){    //可以指定遍历某棵子树
+	private void inorderTraversal(BinaryTree.Node<E> node){    //可以指定遍历某棵子树
 		if(node == null) return;
 		inorderTraversal(node.left);   		   //先遍历左子树
 		System.out.print(node.element + " ");   //再遍历父亲节点
@@ -41,11 +41,12 @@ public class TraverseTree<E> {
 	public void postorderTraversal(){
 		postorderTraversal((BinaryTree.Node<E>)myTree.root());  //遍历整棵树
 	}
-	public void postorderTraversal(BinaryTree.Node<E> node){  //可以指定遍历某棵子树
+	private void postorderTraversal(BinaryTree.Node<E> node){  //可以指定遍历某棵子树
 		if(node == null) return;
 		postorderTraversal(node.left);		 //先遍历左子树
 		postorderTraversal(node.right);		 //最后遍历右子树
 		System.out.print(node.element + " ");  //再遍历父亲节点
 	}
+
 
 }

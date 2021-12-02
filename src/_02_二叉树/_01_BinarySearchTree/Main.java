@@ -1,4 +1,4 @@
-package _02_二叉树.BinarySearchTree;
+package _02_二叉树._01_BinarySearchTree;
 
 import _0_Tools.TreePrinter.BinaryTrees;
 import _0_Tools.TreePrinter.Files;

@@ -1,4 +1,4 @@
-package _02_二叉树.BinarySearchTree;
+package _02_二叉树._01_BinarySearchTree;
 
 public class Person implements Comparable<Person>{
     private int age;

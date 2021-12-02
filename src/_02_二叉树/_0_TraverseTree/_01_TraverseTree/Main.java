@@ -1,6 +1,6 @@
-package _02_二叉树.TraverseTree._01_TraverseTree;
+package _02_二叉树._0_TraverseTree._01_TraverseTree;
 
-import _02_二叉树.BinarySearchTree.BinarySearchTree;
+import _02_二叉树._01_BinarySearchTree.BinarySearchTree;
 import _0_Tools.TreePrinter.BinaryTrees;
 
 /**
@@ -16,7 +16,7 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             tree.add((int)(Math.random()*30));
         }
-        BinaryTrees.print(tree, BinaryTrees.PrintStyle.INORDER);
+        BinaryTrees.print(tree);
         System.out.println("\n" + "===============================");
         f1(tree);
         System.out.println();
@@ -27,7 +27,7 @@ public class Main {
         TraverseTree<Integer> traverseTree = new TraverseTree<>(tree);
         System.out.println("递归实现: ");
         System.out.print("前序遍历: ");
-        traverseTree.preOrderTraversal();
+        traverseTree.preorderTraversal();
         System.out.print("\n中序遍历: ");
         traverseTree.inorderTraversal();
         System.out.print("\n后序遍历: ");
@@ -38,7 +38,7 @@ public class Main {
         TraverseTree1<Integer> traverseTree1 = new TraverseTree1<>(tree);
         System.out.println("迭代实现: ");
         System.out.print("前序遍历: ");
-        traverseTree1.preOrderTraversal();
+        traverseTree1.preorderTraversal();
         System.out.print("\n中序遍历: ");
         traverseTree1.inorderTraversal();
         System.out.print("\n后序遍历: ");

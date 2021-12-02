@@ -1,6 +1,6 @@
 package 算法面试._02_二叉树相关;
 
-import _02_二叉树.BinarySearchTree.BinarySearchTree;
+import _02_二叉树._01_BinarySearchTree.BinarySearchTree;
 import _0_Tools.TreePrinter.BinaryTrees;
 
 import java.util.LinkedList;

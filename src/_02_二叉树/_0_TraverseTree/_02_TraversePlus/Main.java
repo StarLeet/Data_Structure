@@ -1,6 +1,6 @@
-package _02_二叉树.TraverseTree._02_TraversePlus;
+package _02_二叉树._0_TraverseTree._02_TraversePlus;
 
-import _02_二叉树.BinarySearchTree.BinarySearchTree;
+import _02_二叉树._01_BinarySearchTree.BinarySearchTree;
 import _0_Tools.TreePrinter.BinaryTrees;
 
 /**
@@ -22,34 +22,38 @@ public class Main {
         BinaryTrees.println(mytree);
 
         System.out.print("层次遍历：");
-        traversePlus.levelOrder(new TraversePlus.Visitor<Integer>() {
-            @Override       //重写遍历的逻辑,可以是所有节点相加(元素是int)也可以是同时扩大
-            public void visit(Integer element) {
+        traversePlus.levelOrderTraversal(new TraversePlus.Visitor<Integer>() {
+            @Override
+            boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");
+                return element == 11 ? true : false;
             }
         });
         System.out.println();
         System.out.print("前序遍历：");
-        traversePlus.preOrderTraversal(new TraversePlus.Visitor<Integer>() {
+        traversePlus.preorderTraversal(new TraversePlus.Visitor<Integer>() {
             @Override
-            public void visit(Integer element) {
+            boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");
+                return element == 9 ? true : false;
             }
         });
         System.out.println();
         System.out.print("中序遍历：");
         traversePlus.inorderTraversal(new TraversePlus.Visitor<Integer>() {
             @Override
-            public void visit(Integer element) {
+            public boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");
+                return element == 9 ? true : false;
             }
         });
         System.out.println();
         System.out.print("后序遍历：");
         traversePlus.postorderTraversal(new TraversePlus.Visitor<Integer>() {
             @Override
-            public void visit(Integer element) {
+            public boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");
+                return element == 9 ? true : false;
             }
         });
     }

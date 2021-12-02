@@ -1,6 +1,6 @@
-package _02_二叉树.TraverseTree._01_TraverseTree;
+package _02_二叉树._0_TraverseTree._01_TraverseTree;
 
-import _02_二叉树.BinaryTree;
+import _02_二叉树._00_BinaryTree.BinaryTree;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -20,8 +20,8 @@ public class TraverseTree1<E> {
         this.myTree = mytree;
     }
 
-    public void preOrderTraversal(){
-        preOrderTraversal((BinaryTree.Node<E>)myTree.root());
+    public void preorderTraversal(){
+        preorderTraversal((BinaryTree.Node<E>)myTree.root());
     }
     /**
      *  @MethodName preOrderTraversal
@@ -34,7 +34,7 @@ public class TraverseTree1<E> {
      *  在遍历过程中，依次把所遇结点入栈，当左子树为空时，从栈中退出栈顶结点，并将指针指向该结点的右孩子。
      *  如此重复，直到栈为空或指针为空时止
      */
-    public void preOrderTraversal(BinaryTree.Node<E> node){
+    private void preorderTraversal(BinaryTree.Node<E> node){
         if (node == null) return;
         Stack<BinaryTree.Node<E>> stack = new Stack<>(); //用来存储根节点
         while(!stack.empty() || node != null){  //栈不为空说明节点没遍历完
@@ -56,7 +56,7 @@ public class TraverseTree1<E> {
      *  @Param [node]
      *  @return void
      */
-    public void inorderTraversal(BinaryTree.Node<E> node){
+    private void inorderTraversal(BinaryTree.Node<E> node){
         if (node == null) return;
         Stack<BinaryTree.Node<E>> stack = new Stack<>(); //用来存储根节点
         while (!stack.empty() || node != null){
@@ -85,7 +85,7 @@ public class TraverseTree1<E> {
      *  为了统计一个节点的被遍历次数，引入一个同步的标记栈，节点入栈时，标记栈同步入一个标记0
      *  遍历完左子树回到此节点后，修改同步标记为1，当其遍历完右子树回来之后，发现同步标记为1，节点访问并出栈
      */
-    public void postorderTraversal(BinaryTree.Node<E> node){
+    private void postorderTraversal(BinaryTree.Node<E> node){
         if (node == null) return;
         Stack<BinaryTree.Node<E>> stack = new Stack<>(); //用来存储根节点
         Stack<Integer> flagStack = new Stack<>(); //后序遍历中记录节点访问次数
