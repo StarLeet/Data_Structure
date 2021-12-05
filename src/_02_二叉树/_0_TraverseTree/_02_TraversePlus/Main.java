@@ -24,7 +24,7 @@ public class Main {
         System.out.print("层次遍历：");
         traversePlus.levelOrderTraversal(new TraversePlus.Visitor<Integer>() {
             @Override
-            boolean visit(Integer element) {
+            public boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");
                 return element == 11 ? true : false;
             }
@@ -33,7 +33,7 @@ public class Main {
         System.out.print("前序遍历：");
         traversePlus.preorderTraversal(new TraversePlus.Visitor<Integer>() {
             @Override
-            boolean visit(Integer element) {
+            public boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");
                 return element == 9 ? true : false;
             }

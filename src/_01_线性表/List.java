@@ -2,70 +2,85 @@ package _01_线性表;
 
 public interface List<E> {
     static final int ELEMENT_NOT_FOUND = -1;
+
     /**
-     * 清除所有元素
+     *  @MethodName clear
+     *  @Description 清空线性表
+     *  @Param []
+     *  @return void
      */
     void clear();
 
     /**
-     * 元素的数量
-     * @return
+     *  @MethodName size
+     *  @Description  返回表中元素个数
+     *  @Param []
+     *  @return int
      */
     int size();
 
     /**
-     * 是否为空
-     * @return
+     *  @MethodName isEmpty
+     *  @Description  判断线性表是否为空
+     *  @Param []
+     *  @return boolean
      */
     boolean isEmpty();
 
     /**
-     * 是否包含某个元素
-     * @param element
-     * @return
+     *  @MethodName contains
+     *  @Description  元素是否存在
+     *  @Param [element]
+     *  @return boolean
      */
     boolean contains(E element);
 
     /**
-     * 添加元素到尾部
-     * @param element
+     *  @MethodName add
+     *  @Description  表中添加元素
+     *  @Param [element]
+     *  @return void
      */
     void add(E element);
 
     /**
-     * 获取index位置的元素
-     * @param index
-     * @return
+     *  @MethodName get
+     *  @Description  根据索引获取元素
+     *  @Param [index]
+     *  @return E
      */
     E get(int index);
 
     /**
-     * 设置index位置的元素
-     * @param index
-     * @param element
-     * @return 原来的元素ֵ
+     *  @MethodName set
+     *  @Description  修改指定索引的元素
+     *  @Param [index, element]
+     *  @return 原来的元素
      */
     E set(int index, E element);
 
     /**
-     * 在index位置插入一个元素
-     * @param index
-     * @param element
+     *  @MethodName add
+     *  @Description  指定索引添加元素
+     *  @Param [index, element]
+     *  @return void
      */
     void add(int index, E element);
 
 
     /**
-     * 删除index位置的元素
-     * @param index
-     * @return
+     *  @MethodName remove
+     *  @Description  删除指定索引元素
+     *  @Param [index]
+     *  @return 被删除的元素
      */
     E remove(int index);
 
     /**
-     * 查看元素的索引
-     * @param element
-     * @return
+     *  @MethodName indexOf
+     *  @Description  找出元素的索引
+     *  @Param [element]
+     *  @return int
      */
     int indexOf(E element);
 }

@@ -10,7 +10,7 @@ import java.util.Comparator;
  * @Author StarLee
  * @Date 2021/11/28
  */
-
+@SuppressWarnings("all")
 public class RBTree<E> extends BBST<E> {
     private static final boolean RED = false;
     private static final boolean BLACK = true;

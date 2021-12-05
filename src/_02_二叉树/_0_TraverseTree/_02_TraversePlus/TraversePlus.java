@@ -25,8 +25,8 @@ public class TraversePlus<E> {
      * 增强遍历接口,用来控制遍历访问元素时的行为与如何停止
      */
     public static abstract class Visitor<E> {
-        boolean stop;  //停止标记,遍历到指定元素时,为true
-        abstract boolean visit(E element); // 如果返回true，就代表停止遍历
+        public boolean stop;  //停止标记,遍历到指定元素时,为true
+        public abstract boolean visit(E element); // 如果返回true，就代表停止遍历
         // visit用来书写遍历逻辑,可以是遍历元素值+1,总之不局限于打印元素了
     }
 

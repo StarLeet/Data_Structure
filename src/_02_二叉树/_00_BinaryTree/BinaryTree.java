@@ -72,7 +72,7 @@ public class BinaryTree<E> implements BinaryTreeInfo {
     }
 
     /***
-     * 遍历模式实现接口,实现run方法可自行选择遍历方式
+     * 遍历模式实现接口,实现myTraverse方法可自行选择遍历方式
      * @param
      */
     public static interface TraverseMode<E>{
