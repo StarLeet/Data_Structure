@@ -56,6 +56,11 @@ public class BinaryTree<E> implements BinaryTreeInfo {
             }
             return null;
         }
+
+        @Override
+        public String toString() {
+            return element.toString();
+        }
     }
 
     public int size() {

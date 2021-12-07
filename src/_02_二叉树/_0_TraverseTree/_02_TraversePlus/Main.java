@@ -15,12 +15,16 @@ public class Main {
         // 访问器遍历
         Integer date[] = new Integer[] { 7, 4, 9, 2, 5, 8, 11, 3, 12, 1};
         BinarySearchTree<Integer> mytree = new BinarySearchTree<>();
-        TraversePlus<Integer> traversePlus = new TraversePlus<>(mytree);
+        TraversePlus1<Integer> traversePlus1 = new TraversePlus1<>(mytree);
         for (int i = 0; i < date.length; i++) {
             mytree.add(date[i]);
         }
         BinaryTrees.println(mytree);
+        test1(traversePlus1);
 
+    }
+
+    public static void test(TraversePlus<Integer> traversePlus){
         System.out.print("层次遍历：");
         traversePlus.levelOrderTraversal(new TraversePlus.Visitor<Integer>() {
             @Override
@@ -50,6 +54,35 @@ public class Main {
         System.out.println();
         System.out.print("后序遍历：");
         traversePlus.postorderTraversal(new TraversePlus.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print("_" + element + "_ ");
+                return element == 9 ? true : false;
+            }
+        });
+    }
+
+    public static void test1(TraversePlus1<Integer> traversePlus1){
+        System.out.print("前序遍历：");
+        traversePlus1.preorder2(new TraversePlus1.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print("_" + element + "_ ");
+                return element == 9 ? true : false;
+            }
+        });
+        System.out.println();
+        System.out.print("中序遍历：");
+        traversePlus1.inorder(new TraversePlus1.Visitor<Integer>() {
+            @Override
+            public boolean visit(Integer element) {
+                System.out.print("_" + element + "_ ");
+                return element == 9 ? true : false;
+            }
+        });
+        System.out.println();
+        System.out.print("后序遍历：");
+        traversePlus1.postorder(new TraversePlus1.Visitor<Integer>() {
             @Override
             public boolean visit(Integer element) {
                 System.out.print("_" + element + "_ ");

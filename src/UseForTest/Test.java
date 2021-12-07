@@ -1,6 +1,7 @@
 package UseForTest;
 
 import _02_二叉树._01_BinarySearchTree.BinarySearchTree;
+import _0_Tools.TreePrinter.BinaryTrees;
 
 /**
  * @ClassName Test
@@ -12,12 +13,10 @@ import _02_二叉树._01_BinarySearchTree.BinarySearchTree;
 public class Test {
     public static void main(String[] args) {
         BinarySearchTree<Integer> tree = new BinarySearchTree<>();
-        long start = System.currentTimeMillis();
-        for (int i = 0; i < 50_000; i++) {
-            tree.add(1000 + i);
+        for (int i = 0; i < 5; i++) {
+            tree.add(i + 2);
         }
-        long end = System.currentTimeMillis();
-        System.out.println((double)(end - start)/1000);
+        BinaryTrees.println(tree);
     }
 }
 
